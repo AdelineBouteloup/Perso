@@ -291,7 +291,8 @@ section#main_content {
     position: absolute;
     width: 200px;
     height: 24px;
-    background: #999;
+    /*background: #999;*/
+    background: transparent url(../images/download-fallback-bg.png) center top no-repeat;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
