@@ -39,7 +39,7 @@
 
       <section id="main_content">
         <h4>Bienvenue sur la page perso d'Adeline</h4>
-        <br/>
+        
         <p><script type="text/javascript">
             var now = new Date();
  
@@ -51,10 +51,33 @@
             /*var seconde = ('0'+now.getSeconds()).slice(-2);*/
             var chaine = "Aujourd'hui, nous sommes le "+jour+"/"+mois+"/"+annee+" et il est "+heure+" heure "+minute+" minutes.";
             document.write(chaine);
+            document.write(now);
           </script>
         </p>
+        <br/>
         <p>
           <div class="progress-bar blue"></div>
+        </p>
+        <p><script type="text/javascript">
+            //var datref = ;
+            var maxprogress = 280;   // total à atteindre
+            var actualprogress = 0;  // valeur courante
+            var itv = 0;  // id pour setinterval
+            function prog()
+              {
+                if(actualprogress >= maxprogress) 
+                {
+                  clearInterval(itv);   	
+                  return;
+                }	
+                var progressnum = document.getElementById("progressnum");
+                var indicator = document.getElementById("indicator");
+                actualprogress += 1;	
+                indicator.style.width=actualprogress + "px";
+                progressnum.innerHTML = actualprogress;
+                if(actualprogress == maxprogress) clearInterval(itv);   
+              }
+        </script>
         </p>
       </section>
 
