@@ -68,9 +68,12 @@
             var maxprogress = 280;   // total à atteindre
             var actualprogress = (datejour - dateref);  // valeur courante
             var itv = 0;  // id pour setinterval
-            document.write(dateref);
-            document.write(datejour);
-            document.write(actualprogress);
+            var chainedateref = "La date de référence est : "+dateref;
+            document.write(chainedateref); <br/>
+            var chainedatejour = "La date du jour est : "+datejour;
+            document.write(chainedatejour); <br/>
+            var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress;
+            document.write(chaineactualprogress);
             function prog()
               {
                 if(actualprogress >= maxprogress) 
