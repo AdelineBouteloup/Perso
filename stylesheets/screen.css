@@ -322,9 +322,9 @@ section#main_content {
   }
   
   .blue:before { 
-  background: #99BBEE;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#99BBEE), to(#648BA8));
-  background: -moz-linear-gradient(top, #99BBEE, #648BA8);
+  background: #648BA8;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#648BA8), to(#99BBEE));
+  background: -moz-linear-gradient(top, #648BA8, #99BBEE);
   }
 
 
