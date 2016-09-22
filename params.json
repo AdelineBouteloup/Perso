@@ -1,0 +1,6 @@
+{
+  "name": "Perso",
+  "tagline": "Very personal page",
+  "body": "Bienvenue sur la page perso d'Adeline\r\n\r\n`<script type=\"language/javascript\">\r\nvar now = new Date();\r\n \r\nvar annee   = now.getFullYear();\r\nvar mois    = ('0'+now.getMonth()+1).slice(-2);\r\nvar jour    = ('0'+now.getDate()   ).slice(-2);\r\nvar heure   = ('0'+now.getHours()  ).slice(-2);\r\nvar minute  = ('0'+now.getMinutes()).slice(-2);\r\nvar seconde = ('0'+now.getSeconds()).slice(-2);\r\n \r\nalert( \"Aujourd'hui, nous sommes le \"+jour+\"/\"+mois+\"/\"+annee+\" et il est \"+heure+\" heure \"+minute+\" minutes \"+seconde+\" secondes\" );\r\n</script>`",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
