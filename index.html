@@ -58,10 +58,9 @@
         <p>
           <div>
             <div class="progress-bar blue"></div>
-            <div id="progressnum">0</div>
+            <div id="progressnum"></div>
           </div>
-        </p>
-        <p><script type="text/javascript">
+          <script type="text/javascript">
             var dateref = (new Date('12 Aug 2016 00:00:00')).getTime();
             var datejour = new Date().getTime();
             
@@ -88,7 +87,9 @@
                 progressnum.innerHTML = actualprogress;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
-        </script>
+          </script>
+        </p>
+        <p>
         </p>
       </section>
 
