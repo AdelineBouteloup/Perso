@@ -56,13 +56,21 @@
         </p>
         <br/>
         <p>
-          <div class="progress-bar blue"></div>
+          <div>
+            <div class="progress-bar blue"></div>
+            <div id="progressnum">0</div>
+          </div>
         </p>
         <p><script type="text/javascript">
-            //var datref = ;
+            var dateref = (new Date('12 Aug 2016 00:00:00')).getTime();
+            var datejour = new Date().getTime();
+            
             var maxprogress = 280;   // total à atteindre
-            var actualprogress = 0;  // valeur courante
+            var actualprogress = (datejour - dateref);  // valeur courante
             var itv = 0;  // id pour setinterval
+            document.write(dateref);
+            document.write(datejour);
+            document.write(actualprogress);
             function prog()
               {
                 if(actualprogress >= maxprogress) 
