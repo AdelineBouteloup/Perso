@@ -21,26 +21,18 @@
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/AdelineBouteloup/Perso">View on GitHub</a>
     <div class="shell">
 
       <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
             <h1>Perso</h1>
-            <h2>Very personal page</h2>
+            <h2>My very personal page</h2>
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
         </span>
       </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/AdelineBouteloup/Perso/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/AdelineBouteloup/Perso/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
 
       <span class="banner-fix"></span>
 
@@ -48,7 +40,18 @@
       <section id="main_content">
         <p>Bienvenue sur la page perso d'Adeline</p>
 
-<p>``</p>
+        <p><script type="language/javascript">
+            var now = new Date();
+ 
+            var annee   = now.getFullYear();
+            var mois    = ('0'+now.getMonth()+1).slice(-2);
+            var jour    = ('0'+now.getDate()   ).slice(-2);
+            var heure   = ('0'+now.getHours()  ).slice(-2);
+            var minute  = ('0'+now.getMinutes()).slice(-2);
+            var seconde = ('0'+now.getSeconds()).slice(-2);
+ 
+            alert( "Aujourd'hui, nous sommes le "+jour+"/"+mois+"/"+annee+" et il est "+heure+" heure "+minute+" minutes "+seconde+" secondes" );
+        </script></p>
       </section>
 
       <footer>
@@ -59,7 +62,6 @@
           <span class="left-tail"></span>
           <span class="right-tail"></span>
         </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
         <span class="octocat"></span>
       </footer>
 
