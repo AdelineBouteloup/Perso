@@ -323,9 +323,9 @@ section#main_content {
   }
   
   .blue:before { 
-  background: #648BA8;
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#648BA8), to(#7eb0d2));
-  background: -moz-linear-gradient(top, #648BA8, #7eb0d2);
+  background: #417090;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#417090), to(#7eb0d2));
+  background: -moz-linear-gradient(top, #417090, #7eb0d2);
   }
 
 
