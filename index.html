@@ -62,21 +62,21 @@
             <div id="progressnum"></div>
           </div>
           <script type="text/javascript">
-            var dateref = new Date('12 Aug 2016 00:00:00').getTime;
-            var datejour = new Date().getTime;
-            
-            var maxprogress = 280;   // total à atteindre
-            var actualprogress = (datejour - dateref);  // valeur courante
-            var itv = 0;  // id pour setinterval
-            var chainedateref = "La date de référence est : "+dateref;
-            var chainedatejour = "La date du jour est : "+datejour;
-            var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress;
-            document.write(chainedateref); 
-            document.write(chainedatejour); 
-            document.write(chaineactualprogress);
 
-            function prog()
-              {
+            function prog() {
+              var dateref = new Date('12 Aug 2016 00:00:00');
+              var datejour = new Date();
+            
+              var maxprogress = 280;   // total à atteindre
+              var actualprogress = Math.floor((datejour.getTime() - dateref.getTime()) / 86400000);  // valeur courante
+              var itv = actualprogress / maxprogress * 100 ;  // id pour setinterval
+              var chainedateref = "La date de référence est : "+dateref+". ";
+              var chainedatejour = "La date du jour est : "+datejour+". ";
+              var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
+              document.write(chainedateref); 
+              document.write(chainedatejour); 
+              document.write(chaineactualprogress);
+            
                 if(actualprogress >= maxprogress) 
                 {
                   clearInterval(itv);   	
