@@ -42,7 +42,7 @@
         
         <p><script type="text/javascript">
             var now = new Date();
- 
+            var date = convertDateToString(now);
             var annee   = now.getFullYear();
             var mois    = ('0'+(now.getMonth()+1)).slice(-2);
             var jour    = ('0'+now.getDate()   ).slice(-2);
@@ -52,6 +52,7 @@
             var chaine = "Aujourd'hui, nous sommes le "+jour+"/"+mois+"/"+annee+" et il est "+heure+" heure "+minute+" minutes.";
             document.write(chaine);
             document.write(now);
+            document.write(date);
           </script>
         </p>
         <br/>
@@ -61,8 +62,8 @@
             <div id="progressnum"></div>
           </div>
           <script type="text/javascript">
-            var dateref = (new Date('12 Aug 2016 00:00:00')).getTime();
-            var datejour = new Date().getTime();
+            var dateref = convertDateToString(new Date('12 Aug 2016 00:00:00'));
+            var datejour = convertDateToString(new Date());
             
             var maxprogress = 280;   // total à atteindre
             var actualprogress = (datejour - dateref);  // valeur courante
