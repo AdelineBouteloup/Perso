@@ -42,7 +42,7 @@
         
         <p><script type="text/javascript">
             var now = new Date();
-            var date = convertDateToString(now);
+            /*var date = convertDateToString(now);*/
             var annee   = now.getFullYear();
             var mois    = ('0'+(now.getMonth()+1)).slice(-2);
             var jour    = ('0'+now.getDate()   ).slice(-2);
@@ -69,11 +69,12 @@
             var actualprogress = (datejour - dateref);  // valeur courante
             var itv = 0;  // id pour setinterval
             var chainedateref = "La date de référence est : "+dateref;
-            
             var chainedatejour = "La date du jour est : "+datejour;
-            
             var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress;
-            
+            document.write(chainedateref); 
+            document.write(chainedatejour); 
+            document.write(chaineactualprogress);
+
             function prog()
               {
                 if(actualprogress >= maxprogress) 
@@ -81,9 +82,6 @@
                   clearInterval(itv);   	
                   return;
                 }	
-                document.write(chainedateref); <br/>
-                document.write(chainedatejour); <br/>
-                document.write(chaineactualprogress);
                 
                 var progressnum = document.getElementById("progressnum");
                 var indicator = document.getElementById("indicator");
