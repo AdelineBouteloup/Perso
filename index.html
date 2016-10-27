@@ -49,7 +49,7 @@
             var heure   = ('0'+now.getHours()  ).slice(-2);
             var minute  = ('0'+now.getMinutes()).slice(-2);
             /*var seconde = ('0'+now.getSeconds()).slice(-2);*/
-            var chaine = "Aujourd'hui, nous sommes le "+jour+"/"+mois+"/"+annee+" et il est "+heure+" heure "+minute+" minutes.";
+            var chaine = "Aujourd'hui, nous sommes le "+jour+"/"+mois+"/"+annee+".";
             document.write(chaine);
             /*document.write(now);*/
             /*document.write(date);*/
@@ -59,7 +59,7 @@
         <p>
           <div>
             <div class="progress-bar blue"></div>
-            <div id="progressnum"></div>
+            <div id="indicator"></div>
           </div>
           <script type="text/javascript">
             var dateref = new Date('12 Aug 2016 00:00:00');
@@ -72,9 +72,9 @@
             var chainedatejour = "La date du jour est : "+datejour+". ";
             var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
             var pourcentageAvct = "L'avancement est de "+itv+" % ";
-            document.write(chainedateref); 
+            /*document.write(chainedateref); 
             document.write(chainedatejour); 
-            document.write(chaineactualprogress);
+            document.write(chaineactualprogress);*/
             document.write(pourcentageAvct);
 
             function prog() {
@@ -86,9 +86,9 @@
                 
                 var progressnum = document.getElementById("progressnum");
                 var indicator = document.getElementById("indicator");
-                actualprogress += 1;	
-                indicator.style.width=actualprogress + "px";
-                progressnum.innerHTML = actualprogress;
+                //actualprogress += 1;	
+                indicator.style.width=itv + "px";
+                //progressnum.innerHTML = actualprogress;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
 
