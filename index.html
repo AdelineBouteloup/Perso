@@ -83,18 +83,16 @@
                   itv = 100;
                 }	
                 
-                var progressbarbefore = document.getElementById("progress-bar blue:before");
-                var progressbarafter = document.getElementById("progress-bar blue:after");
-                actualprogress += 1;	
-                progressbarbefore.style.width=itv + "px";
-                progressbarafter.style.width=itv + "px";
+                var progressbar = document.getElementById("progress-bar blue");
+                //var progressbarafter = document.getElementById(":after");
+                //actualprogress += 1;	
+                progressbar.style.width=itv;
+                //progressbarafter.style.width=itv;
                 //progress-bar blue.innerHTML = itv;
-                if(actualprogress == maxprogress) clearInterval(itv);   
+                //if(actualprogress == maxprogress) clearInterval(itv);   
               }
 
           </script>
-        </p>
-        <p>
         </p>
       </section>
 
