@@ -86,9 +86,9 @@
                 var progressbarbefore = document.getElementById("progress-bar blue:before");
                 var progressbarafter = document.getElementById("progress-bar blue:after");
                 actualprogress += 1;	
-                progress-bar blue:before.style.width=itv + "px";
-                progress-bar blue:after.style.width=itv + "px";
-                progress-bar blue.innerHTML = itv;
+                progressbarbefore.style.width=itv + "px";
+                progressbarafter.style.width=itv + "px";
+                //progress-bar blue.innerHTML = itv;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
 
