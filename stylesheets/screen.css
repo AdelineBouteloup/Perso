@@ -291,7 +291,7 @@ section#main_content {
     content: '';
     display: block;
     position: absolute;
-    width: 200px;
+    width: 0px;
     height: 24px;
     /*background: #999;*/
     background: #648BA8;
@@ -307,7 +307,7 @@ section#main_content {
     content: '|||||||||||||';
     display: block;
     position: absolute;
-    width: 200px;
+    width: 0px;
     height: 24px;
     overflow: hidden;
     border-radius: 12px;
