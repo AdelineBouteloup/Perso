@@ -73,14 +73,11 @@
               var chainedateref = "La date de référence est : "+dateref+". ";
               var chainedatejour = "La date du jour est : "+datejour+". ";
               var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
-              document.write(chainedateref); 
-              document.write(chainedatejour); 
-              document.write(chaineactualprogress);
+              var pourcentageAvct = "L'avancement est de "+itv+" % ";
             
                 if(actualprogress >= maxprogress) 
                 {
-                  clearInterval(itv);   	
-                  return;
+                  itv = 100;
                 }	
                 
                 var progressnum = document.getElementById("progressnum");
@@ -90,6 +87,11 @@
                 progressnum.innerHTML = actualprogress;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
+            document.write(chainedateref); 
+            document.write(chainedatejour); 
+            document.write(chaineactualprogress);
+            document.write(itv);
+
           </script>
         </p>
         <p>
