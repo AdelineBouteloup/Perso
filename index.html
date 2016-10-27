@@ -62,7 +62,7 @@
             <div id="indicator"></div>
           </div>
           <script type="text/javascript">
-            var dateref = new Date('12 Aug 2016 00:00:00');
+            var dateref = new Date('15 Aug 2016 00:00:00');
             var datejour = new Date();
             
             var maxprogress = 280;   // total à atteindre
@@ -86,9 +86,9 @@
                 
                 var progressnum = document.getElementById("progressnum");
                 var indicator = document.getElementById("indicator");
-                //actualprogress += 1;	
+                actualprogress += 1;	
                 indicator.style.width=itv + "px";
-                //progressnum.innerHTML = actualprogress;
+                progressnum.innerHTML = itv;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
 
