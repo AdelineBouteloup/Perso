@@ -66,7 +66,7 @@
             var datejour = new Date();
             
             var maxprogress = 280;   // total à atteindre
-            var actualprogress = Math.floor((datejour.getTime() - dateref.getTime()) / 86400000);  // valeur courante
+            var actualprogress = (datejour - dateref) / 86400000;  // valeur courante
             var itv = actualprogress / maxprogress * 100 ;  // id pour setinterval
             var chainedateref = "La date de référence est : "+dateref+". ";
             var chainedatejour = "La date du jour est : "+datejour+". ";
@@ -75,7 +75,7 @@
             document.write(chainedateref); 
             document.write(chainedatejour); 
             document.write(chaineactualprogress);
-            document.write(itv);
+            document.write(pourcentageAvct);
 
             function prog() {
            
