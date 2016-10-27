@@ -59,6 +59,8 @@
         <p>
           <div>
             <div class="progress-bar blue"></div>
+            <div id="::before"></div>
+            <div id="::after"></div>
           </div>
           <script type="text/javascript">
             var dateref = new Date('15 Aug 2016 00:00:00');
@@ -83,16 +85,17 @@
                   itv = 100;
                 }	
                 
-                var progressbar = document.getElementById("progress-bar blue");
-                //var progressbarafter = document.getElementById(":after");
+                var progressbarbefore = document.getElementById("::before");
+                var progressbarafter = document.getElementById("::after");
                 //actualprogress += 1;	
-                progressbar.style.width=itv;
-                //progressbarafter.style.width=itv;
+                progressbarbefore.style.width=itv;
+                progressbarafter.style.width=itv;
                 //progress-bar blue.innerHTML = itv;
                 //if(actualprogress == maxprogress) clearInterval(itv);   
               }
 
           </script>
+        <p>
         </p>
       </section>
 
