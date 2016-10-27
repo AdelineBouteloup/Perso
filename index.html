@@ -62,19 +62,23 @@
             <div id="progressnum"></div>
           </div>
           <script type="text/javascript">
+            var dateref = new Date('12 Aug 2016 00:00:00');
+            var datejour = new Date();
+            
+            var maxprogress = 280;   // total à atteindre
+            var actualprogress = Math.floor((datejour.getTime() - dateref.getTime()) / 86400000);  // valeur courante
+            var itv = actualprogress / maxprogress * 100 ;  // id pour setinterval
+            var chainedateref = "La date de référence est : "+dateref+". ";
+            var chainedatejour = "La date du jour est : "+datejour+". ";
+            var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
+            var pourcentageAvct = "L'avancement est de "+itv+" % ";
+            document.write(chainedateref); 
+            document.write(chainedatejour); 
+            document.write(chaineactualprogress);
+            document.write(itv);
 
             function prog() {
-              var dateref = new Date('12 Aug 2016 00:00:00');
-              var datejour = new Date();
-            
-              var maxprogress = 280;   // total à atteindre
-              var actualprogress = Math.floor((datejour.getTime() - dateref.getTime()) / 86400000);  // valeur courante
-              var itv = actualprogress / maxprogress * 100 ;  // id pour setinterval
-              var chainedateref = "La date de référence est : "+dateref+". ";
-              var chainedatejour = "La date du jour est : "+datejour+". ";
-              var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
-              var pourcentageAvct = "L'avancement est de "+itv+" % ";
-            
+           
                 if(actualprogress >= maxprogress) 
                 {
                   itv = 100;
@@ -87,10 +91,6 @@
                 progressnum.innerHTML = actualprogress;
                 if(actualprogress == maxprogress) clearInterval(itv);   
               }
-            document.write(chainedateref); 
-            document.write(chainedatejour); 
-            document.write(chaineactualprogress);
-            document.write(itv);
 
           </script>
         </p>
