@@ -17,6 +17,8 @@
         $('#main_content').headsmart()
       })
     </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/jquery.classyloader.min.js"></script>
     <title>Perso by AdelineBouteloup</title>
   </head>
 
@@ -56,23 +58,20 @@
           </script>
         </p>
         <br/>
-        <p>
-          <div>
-            <div class="progress-bar blue"></div>
-            <div id="::before"></div>
-            <div id="::after"></div>
-          </div>
+        <div class="progress-bar blue"></div>
+                
           <script type="text/javascript">
             var dateref = new Date('15 Aug 2016 00:00:00');
             var datejour = new Date();
             
-            var maxprogress = 280;   // total à atteindre
-            var actualprogress = (datejour - dateref) / 86400000;  // valeur courante
-            var itv = actualprogress / maxprogress * 100 ;  // id pour setinterval
+            var maxprogress = 280;   // nombre de jour total
+            var actualprogress = (datejour - dateref) / 86400000;  // nombre de jour depuis le début
+            var itv = actualprogress / maxprogress * 100 ;  // pourcentage d'avancement
             var chainedateref = "La date de référence est : "+dateref+". ";
             var chainedatejour = "La date du jour est : "+datejour+". ";
             var chaineactualprogress = "La différence entre ces deux dates est la valeur courante : "+actualprogress+". ";
             var pourcentageAvct = "L'avancement est de "+itv+" % ";
+			      var pxavancement = itv * 300 / 100 ;  //nombre de pixel correspondant au pourcentage d'avancement
             /*document.write(chainedateref); 
             document.write(chainedatejour); 
             document.write(chaineactualprogress);*/
@@ -97,8 +96,6 @@
               }
 
           </script>
-        <p>
-        </p>
       </section>
 
       <footer>
